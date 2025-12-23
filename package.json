@@ -1,0 +1,56 @@
+{
+  "name": "@quickterms/sdk",
+  "version": "1.0.0",
+  "description": "QuickTerms SDK for embedding privacy policies and terms of service",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.mjs",
+      "require": "./dist/react.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "quickterms",
+    "privacy-policy",
+    "terms-of-service",
+    "legal",
+    "embed",
+    "react"
+  ],
+  "author": "QuickTerms",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/batchco/quickterms"
+  },
+  "homepage": "https://quickterms.io",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
